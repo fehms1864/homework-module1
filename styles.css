@@ -61,11 +61,11 @@ header {
 }
 
 /* Main */
-main #main-info {
+main {
     font: Arial, Helvetica, sans-serif;
     margin: 5rem 12rem 5rem 12rem;
 }
-main h2 {
+main h1 {
     color: #9ed034;
 }
 

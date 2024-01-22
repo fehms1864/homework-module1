@@ -237,3 +237,35 @@ textarea {
     resize: none;
 }
 
+/* Cliffs */
+#cliffs  {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0 0;
+}
+#cliffs .cliffimage {
+    display: inline-block;
+    width: 450px;
+    text-align: center;
+}
+#cliffs .cliffimage:nth-child(odd) {
+    margin-right: 30px;
+}
+#cliffs .cliffimage:first-child {
+    margin-bottom: 30px;
+}
+#cliffs .cliffimage label{
+    display: block;
+    background: #852B1B;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+#cliffs .cliffimage img {
+    width: 100%;
+    float: left;
+}

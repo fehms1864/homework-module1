@@ -192,47 +192,53 @@ form fieldset {
     border-style: solid;
     border-color: #9ed034;
 }
+form fieldset > div {
+    margin: 0 0 0 2rem;
+    width: 550px;
+}
+form fieldset > div > label {
+    font-weight: bold;
+}
 form fieldset legend {
     color: #4977D1;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 1.5rem;
-
-}
-form .textbox, form .commentbox, form .button {
-    width: 550px;
-}
-.radios label, .selectmenu label, .textbox label, .commentbox label, .button {
-    font-weight: bold;
     margin-left: 2rem;
-}
-.textbox label, .commentbox label, .button {
-    display: block;
 }
 .textbox input {
     width: 100%;
     height: 20px;
     margin-bottom: 1rem;
-    margin-left: 2rem;
 }
 form .selectmenu select {
     width: 150px;
     text-align: center;
     margin: 1rem 0;
 }
+form .button {
+    text-align: end;
+    margin: 1rem 0 1rem 2rem;
+}
 form .button input {
     width: 8em;
-    height: 2em;
+    height: 2.5em;
     color: #fff;
-    background-color: #4977D1;
-    border-style: none;
+    /* background-color: #4977D1; */
+    border: none;
     font-weight: bold;
-    float: right;
-    margin: 0.5rem 0 1rem;
+}
+form .randomcode {
+    text-align: end;
+}
+form .randomcode p {
+    display: inline-block;
+    margin: 0.5em 0 0 0.5em;
+    background-color: lightgrey;
+    padding: 0.75rem;
 }
 textarea {
     width: 100%;
-    margin-left: 2rem;
     height: 10rem;
     resize: none;
 }

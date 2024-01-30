@@ -1,4 +1,3 @@
-//Create a time data function
 function currentTime() {
     var d = new Date(); //Get current date
     var hr = d.getHours(); //Get current hours

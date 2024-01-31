@@ -4,6 +4,8 @@
 function generateCode() {
     //Create variables to store generated codes and the type of characters we want to show as codes
     var code = ' '; //initialize to null value
+    var getCode = ' '; //to store entered code
+    var btnvalue; //for button boolean value
     var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
 
     //Generate character multiple times using a loop
@@ -18,8 +20,17 @@ function generateCode() {
 document.getElementById("codes").innerHTML = generateCode();
 
 //Disable Button
-function disableButton() {
-    document.getElementById("submit").disabled = true;
+function disableButton(btnvalue) {
+    document.getElementById("submit").disabled = btnvalue; //able/disable button
+    if (btnvalue == true) { //test if button is disabled or enabled
+        //set button and label color translucent
+        document.getElementById("submit").style.backgroundColor = "rgb(73, 119, 209, 0.3)";
+        document.getElementById("submit").style.color = "rgb(255, 255, 255, 0.5)";
+    } else {
+        //set button and label color with no translucent
+        document.getElementById("submit").style.backgroundColor = "rgb(73, 119, 209, 1)";
+        document.getElementById("submit").style.color = "rgb(255, 255, 255, 1)";
+    }
 }
 
 //Activate function

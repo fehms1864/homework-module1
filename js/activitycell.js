@@ -4,8 +4,8 @@ $(document).ready(function() {
         //the element is not a cell with the activity written on it.
        if( $(this).text() != "Not Available" && $(this).index() != 0 ) {
             //Change cell color to darker green otherwise go back to original color
-            if( $(this).css("background-color") != "rgb(174, 223, 0)" ) {
-                $(this).css("background-color","rgb(174, 223, 0)");
+            if( $(this).css("background-color") != "rgb(158, 208, 52)" ) {
+                $(this).css("background-color","rgb(158, 208, 52)");
                 $(this).css('color','white');
             } else {
                 $(this).css("background-color","");

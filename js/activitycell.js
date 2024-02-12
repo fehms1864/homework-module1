@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("tr td").click(function() {
+        var index = $(this).index();
         //Checks if the element has a location available for the activity and
         //the element is not a cell with the activity written on it.
        if( $(this).text() != "Not Available" && $(this).index() != 0 ) {
@@ -10,6 +11,18 @@ $(document).ready(function() {
             } else {
                 $(this).css("background-color","");
                 $(this).css('color','');
+            }
+
+            if ($(this).css("background-color") == "rgb(158, 208, 52)") {
+                $('#displaySelected').css("visibility","visible"); //make display box visible
+                $('#displaySelected').css("margin-top","2em"); //add spaces above display box
+                $('#result').append("<p>"+$(this).text()+" at "+$('th').eq(index).text()+"</p>"); //add child element with contents of cell
+            } else { //if selected cell don't have class
+                $('#result p:contains('+$(this).text()+')').remove(); //remove child element
+                if ($('#result').has('p').length == false) { //check if there are any child elements within parent
+                    $('#displaySelected').css("visibility","hidden"); //make display box hidden
+                    $('#displaySelected').css("margin-top","0"); //remove spaces above display box
+                }
             }
        }
     });

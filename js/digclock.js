@@ -34,7 +34,7 @@ function currentTime() {
 
     timeDiff = hr - utchr;
     if (timeDiff < 0) {
-        adjTimeDiff = -1 * (12 - timeDiff);
+        adjTimeDiff = -1 * (12 + timeDiff);
     } else {
         adjTimeDiff = (12 - timeDiff);
     }

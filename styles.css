@@ -80,20 +80,20 @@ section {
     width: 100%;
     background-color: #4288C3;
 }
-section #partners {
+section div #partners {
     width: 1200px;
     padding: 2em 0 2em 0;
     margin: 0 auto;
     text-align: center;
 }
-section #partners .partner {
+section div #partners .partner {
     display: inline-block;
     margin: 0 0.75em;
     padding: 1.3em 1.5em;
     background-color: #fff;
     border-radius: 50%;
 }
-section #partners .partner img{
+section div #partners .partner img{
     width: 90px;
     height: 90px;
 }
@@ -152,9 +152,10 @@ table {
     width: 1000px;
     margin: 4em auto 0 auto;
 }
-caption {
+#tablecaption {
+    caption-side: top;
     background: #852B1B;
-    height: 40px;
+    text-align: center;
     color: #fff;
     font-size: 1.3em;
     font-weight: bold;
@@ -321,33 +322,24 @@ textarea {
 
 /* ACTIVATE BELOW WHEN TESTING NAVIGATION AND OTHERS FOR RWD */
 /* Media Queries */
-@media (max-width: 768px) {
-    footer #nondisclaimer .copy {
-        padding: 3.5em 0em 3.5em 0em;
-        text-align: center;
-        float: none;
-        font-size: 0.9em;
-    }
-    footer #nondisclaimer .social {
-        padding: 2.5em 0;
-        margin: 0;
-        text-align: center;
-        float: none;
-    }
-}
-
 @media (max-width: 992px) {
+    section div #partners {
+        width: 100%;
+        margin: 0 auto;
+    }
+    section div #partners .partner {
+        margin: 1rem;
+    }
     .logo img {
         position: relative;
         bottom: 8px;
     }
     .main-menu {
         max-width: 700px;
-        /* max-width: 700px; */
         height: 120px;
         position: absolute;
         background-color: #ffffffcc;
-        /* right: 1.7em; */
+        z-index: 1;
     }
     .main-menu #navbarNav ul li {
         background-color: #ffffff;
@@ -366,5 +358,34 @@ textarea {
         padding: 25px;
         min-height: 450px;
         margin-top: 1em;
+    }
+} 
+
+@media (max-width: 768px) {
+    .main-header {
+        max-width: 700px;
+        width: auto;
+    }
+    footer #nondisclaimer .copy {
+        padding: 3.5em 0em 3.5em 0em;
+        text-align: center;
+        float: none;
+        font-size: 0.9em;
+    }
+    footer #nondisclaimer .social {
+        padding: 2.5em 0;
+        margin: 0;
+        text-align: center;
+        float: none;
+    }
+}
+
+@media (max-width: 321px) {
+    .main-header {
+        max-width: 300px;
+        width: 300px;
+    }
+    .main-menu #navbarNav ul li {
+        font-size: x-small;
     }
 } 

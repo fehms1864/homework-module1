@@ -53,48 +53,66 @@
 
             <!-- Main Content -->
             <main>
-                <h1>
-                    Introducing California's Greatest Cliffs
-                </h1>
-                <h3>
-                    What is so unique about California cliffs?
-                </h3>
-                <p>
-                    California cliffs are one of a kind in the United States where no cliffs are as magnificent and beautiful as them. 
-                    And California is the only state that have cliffs that fronts all possible environments: sea, river, mountains and canyons. 
-                    There are four such individual unique cliffs: West Cliff, North Cliff, East Cliff and South Cliff. 
-                    All offer fantastic overlooking views, recreational areas, camping sites, wildlife watch spots and overnight cabins.
-                </p>
-                <h3>
-                    Where are these cliffs?
-                </h3>
-                <p>
-                    Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. 
-                    The closest cliff to Irvine is West Cliff, which is the most popular and most visited.
-                </p>
+                <!-- <div class="text-center"> -->
+                    <h1 class="text-center">
+                        Introducing California's Greatest Cliffs
+                    </h1>
+                    <div class="row">
+                        <div class="col-sm-6 pb-2 pb-sm-0 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center">
+                                        What is so unique about California cliffs?
+                                    </h3>
+                                    <p class="card-text">
+                                        California cliffs are one of a kind in the United States where no cliffs are as magnificent and beautiful as them. 
+                                        And California is the only state that have cliffs that fronts all possible environments: sea, river, mountains and canyons. 
+                                        There are four such individual unique cliffs: West Cliff, North Cliff, East Cliff and South Cliff. 
+                                        All offer fantastic overlooking views, recreational areas, camping sites, wildlife watch spots and overnight cabins.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 pt-2 pt-sm-0 d-flex">
+                            <div class="card flex-fill">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center">
+                                        Where are these cliffs?
+                                    </h3>
+                                    <p class="card-text">
+                                        Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. 
+                                        The closest cliff to Irvine is West Cliff, which is the most popular and most visited.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
             </main> <!-- End of Main Content -->
 
             <section>
-                <ul id="partners">
-                    <!-- <li class="partner">
-                        <img src="images/partners/partner-bustour.png" alt="Partner Bus Tour">
-                    </li>
-                    <li class="partner">
-                        <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
-                    </li>
-                    <li class="partner">
-                        <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
-                    </li>
-                    <li class="partner">
-                        <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
-                    </li>
-                    <li class="partner">
-                        <img src="images/partners/partner-rentalbike.png" alt="Partner Rental Bike">
-                    </li>
-                    <li class="partner">
-                        <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
-                    </li> -->
-                </ul>
+                <div class="row row-cols-1 row-cols-sm-auto row-cols-md-auto row-cols-lg-auto">
+                    <ul id="partners">
+                        <!-- <li class="partner">
+                            <img src="images/partners/partner-bustour.png" alt="Partner Bus Tour" class="img-fluid">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental" class="img-fluid">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure" class="img-fluid">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-collegetours.png" alt="Partner College Tours" class="img-fluid">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-rentalbike.png" alt="Partner Rental Bike" class="img-fluid">
+                        </li>
+                        <li class="partner">
+                            <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group" class="img-fluid">
+                        </li> -->
+                    </ul>
+                </div>
             </section>
 
             <!-- Footer -->
@@ -116,24 +134,16 @@
             </footer> <!-- End of Footer -->
         </div>
 
-        <!-- jQuery first, then popper.js, then bootstrap JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
         <!-- Digital Clock -->
         <script src="js/digclock.js"></script>
 
         <!-- Partners -->
         <script src="js/site_scripts.js"></script>
 
-        
-        <script>
-            $("#hamburger").click(function () {
-                $("#navbarNav").css("display","block");
-                $("#navbarNav").css("visibility","visible");
-            });
-        </script>
+        <!-- jQuery first, then popper.js, then bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     </body>
 </html>

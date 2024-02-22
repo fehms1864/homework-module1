@@ -4,45 +4,47 @@
     <head>
         <title>Homework Module 1</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- styles -->
-        <link rel="stylesheet" href="styles.css">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- styles -->
+        <link rel="stylesheet" href="styles.css">
 
     </head>
 
     <body id="contact" onload="disableButton(true)"> 
         <div id="container">
+            <div class="main-header sticky-top">
+                <nav class="navbar navbar-expand-lg navbar-dark main-menu py-0">
+                    <a class="navbar-brand py-0" href="#">
+                        <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav align-items-end">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cliffs.html">Cliffs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="activities.html">Activities</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
             <header>
-                <div class="main-header">
-                    <nav class="navbar navbar-expand-lg navbar-light main-menu py-0">
-                        <a class="navbar-brand py-0" href="#">
-                            <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                            <ul class="navbar-nav align-items-end">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="cliffs.html">Cliffs</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="activities.html">Activities</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
             </header>
 
             <!-- Main Content -->
@@ -67,7 +69,7 @@
 
                 <form action="/contact" method="post">  
                 <fieldset>  
-                    <legend>Contact Form</legend>
+                    <h4>Contact Form</h4>
                     <div class="textbox">
                         <label>Name:</label> 
                         <input type="text" name="name" placeholder="John Doe">  
@@ -105,8 +107,13 @@
                     </div>
 
                     <div class="button">
-                        <input id="submit" type="submit" value="Inquire">
+                        <!-- <input id="submit" type="submit" value="Inquire"> -->
+                        <button id="submit" class="btn btn-primary border border-0" type="submit" value="Inquire">
+                            <i class="fa fa-light fa-paper-plane pr-1"></i>
+                            Inquire
+                        </button>
                     </div> 
+                    
                 </fieldset>  
                 </form>                
             </main> <!-- End of Main Content -->

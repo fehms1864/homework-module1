@@ -9,10 +9,10 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
         <!-- styles -->
         <link rel="stylesheet" href="styles.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     </head>
 
@@ -58,11 +58,11 @@
                     
                 <div class="contactinfo">
                     <div class="phone">
-                        <span>Phone:</span>
+                        <p class="h4">Phone</p>
                         <span>(800)GCLIFFS</span>
                     </div>
-                    <div class="email">
-                        <span>Email:</span>
+                    <div class="email mt-4">
+                        <p class="h4">Email</p>
                         <span>info@greatcliffs.com</span>
                     </div>
                 </div>
@@ -70,24 +70,15 @@
                 <form action="/contact" method="post">  
                 <fieldset>  
                     <h4>Contact Form</h4>
-                    <div class="textbox">
-                        <label>Name:</label> 
-                        <input type="text" name="name" placeholder="John Doe">  
-                        <label>Email:</label>  
-                        <input type="email" name="email" placeholder="johndoe@gmail.com"> 
-                        <label>Phone:</label>
-                        <input type="text" name="phone" placeholder="xxx-xxx-xxxx"> 
+                    <div class="form-group pl-5 row col-sm-9">
+                            <input type="text" class="form-control my-4 py-4" name="name" placeholder="Name:"> 
+                            <input type="email" class="form-control my-4 py-4" id="email" placeholder="Email:" name="email">
+                            <input type="tel" class="form-control my-4 py-4" name="phone" placeholder="Phone:"> 
                     </div>
                     
-                    <div class="radios">
-                        <label>How should we contact you?</label>  
-                        <input type="radio" name="contact" value="email" checked>Email 
-                        <input type="radio" name="contact" value="phone">Phone
-                    </div>
-
-                    <div class="selectmenu">
-                        <label>Which Cliff are you inquiring?</label>  
-                        <select>
+                    <div class="form-group selectmenu pl-5 row col-sm-9">
+                        <label for="sel1">Which Cliff are you inquiring?</label>  
+                        <select class="form-control" id="sel1">
                             <option>West Cliff</option>
                             <option>North Cliff</option>
                             <option>East Cliff</option>
@@ -95,19 +86,35 @@
                         </select>
                     </div>
                     
-                    <div class="commentbox">
+                    <div class="radio col-form-label pl-5 row col-sm-6">
+                        <div class="form-group">
+                            <div class="form-check-label">
+                                <label>How should we contact you?</label>
+                            </div>
+                            <div class="form-check form-check-inline pr-4">
+                                <input class="form-check-input" type="radio" name="contact" id="emailradio">
+                                <label class="form-check-label" for="emailradio"> Email </label>
+                            </div>
+                            <div class="form-check form-check-inline pl-4">
+                                <input class="form-check-input" type="radio" name="contact" id="phoneradio">
+                                <label class="form-check-label" for="phoneradio"> Phone </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="commentbox form-floating pl-5 row col-sm-9">
                         <label>How did you hear about us:</label>  
-                        <textarea></textarea>
+                        <textarea class="form-control" id="floatingTextarea" spellcheck="false"></textarea>
+
                     </div>
 
                     <!-- Random Codes -->
-                    <div class="randomcode">
+                    <div class="randomcode row-reverse col-sm-8 col-10">
                         <input id="codeentered" type="text" name="randomcode" placeholder="Enter characters">
                         <p id="codes"></p>
                     </div>
 
-                    <div class="button">
-                        <!-- <input id="submit" type="submit" value="Inquire"> -->
+                    <div class="button row-reverse col-sm-8 col-10">
                         <button id="submit" class="btn btn-primary border border-0" type="submit" value="Inquire">
                             <i class="fa fa-light fa-paper-plane pr-1"></i>
                             Inquire

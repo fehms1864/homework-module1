@@ -14,14 +14,14 @@ $(document).ready(function() {
             }
 
             if ($(this).css("background-color") == "rgb(158, 208, 52)") {
-                $('#displaySelected').css("visibility","visible"); //make display box visible
-                $('#displaySelected').css("margin-top","2em"); //add spaces above display box
-                $('#result').append("<p>"+$(this).text()+" at "+$('th').eq(index).text()+"</p>"); //add child element with contents of cell
+                // $('#displaySelected').css("visibility","visible"); //make display box visible
+                // $('#displaySelected').css("margin-top","2em"); //add spaces above display box
+                $('.modal-body').append("<p>"+$(this).text()+" at "+$('th').eq(index).text()+"</p>"); //add child element with contents of cell
             } else { //if selected cell don't have class
-                $('#result p:contains('+$(this).text()+')').remove(); //remove child element
-                if ($('#result').has('p').length == false) { //check if there are any child elements within parent
-                    $('#displaySelected').css("visibility","hidden"); //make display box hidden
-                    $('#displaySelected').css("margin-top","0"); //remove spaces above display box
+                $('.modal-body p:contains('+$(this).text()+')').remove(); //remove child element
+                if ($('.modal-body').has('p').length == false) { //check if there are any child elements within parent
+                    // $('#displaySelected').css("visibility","hidden"); //make display box hidden
+                    // $('#displaySelected').css("margin-top","0"); //remove spaces above display box
                 }
             }
        }
@@ -35,4 +35,8 @@ $(document).ready(function() {
        }
     });
 
+    //nice to have to show user that after clicking get info something happens
+    $("#getInfo").click(function () {
+        setTimeout(() => alert("success! Will get back with more info soon!"), '1000' );
+    });
 })

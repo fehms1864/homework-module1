@@ -8,11 +8,11 @@ header {
     background: no-repeat white url(images/cliff_ocean.jpg);
     background-size: 100% 400px;
 }
-#activities header {
+#activities {
     background: no-repeat white url(images/runfly.jpeg);
     background-size: 100% 400px;
 }
-#contact header {
+#contact {
     background: no-repeat white url(images/cliff_rock.jpeg);
     background-size: 100% 400px;
 }
@@ -216,8 +216,9 @@ form fieldset > div {
     margin: 0 0 0 2rem;
     width: 550px;
 }
-form fieldset > div > label {
+form fieldset > div > label, fieldset > div > input::placeholder, .radio {
     font-weight: bold;
+    color: #495057;
 }
 form fieldset h4 {
     margin: 2rem 0 1rem 2rem;
@@ -225,15 +226,16 @@ form fieldset h4 {
     text-transform: uppercase;
     font-weight: bold;
 }
-.textbox input {
+/* .textbox input {
     width: 100%;
     height: 20px;
     margin-bottom: 1rem;
-}
+} */
 form .selectmenu select {
-    width: 150px;
-    text-align: center;
-    margin: 1rem 0;
+    /* width: 150px; */
+    /* text-align: center; */
+    /* margin: 1rem 0; */
+    width: 90%;
 }
 form .button {
     text-align: end;
@@ -250,16 +252,18 @@ form .button input {
 form .randomcode {
     text-align: end;
 }
+form .randomcode input::placeholder {
+    font-weight: normal;
+}
 form .randomcode p {
     display: inline-block;
     margin: 0.5em 0 0 0.5em;
     background-color: lightgrey;
     padding: 0.75rem;
 }
-textarea {
-    width: 100%;
-    height: 10rem;
-    resize: none;
+.commentbox textarea {
+    min-height: 150px;
+    margin-bottom: 1.5rem;
 }
 
 /* Cliffs */
@@ -270,15 +274,16 @@ textarea {
 }
 #cliffs .cliffimage {
     display: inline-block;
-    width: 450px;
+    max-width: 450px;
     text-align: center;
+    padding: 1rem;
 }
-#cliffs .cliffimage:nth-child(odd) {
+/* #cliffs .cliffimage:nth-child(odd) {
     margin-right: 30px;
-}
-#cliffs .cliffimage:first-child {
+} */
+/* #cliffs .cliffimage:first-child {
     margin-bottom: 30px;
-}
+} */
 #cliffs .cliffimage label{
     display: block;
     background: #852B1B;
@@ -288,11 +293,12 @@ textarea {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     text-align: center;
+    margin: 1rem 0 0;
 }
 
 #cliffs .cliffimage img {
     width: 100%;
-    float: left;
+    /* float: left; */
 }
 
 #timeofday {
@@ -350,7 +356,6 @@ textarea {
         max-width: 700px;
         height: 120px;
         position: absolute;
-        /* background-color: #ffffffcc; */
         z-index: 1;
     }
     .main-menu #navbarNav ul li {
@@ -363,7 +368,7 @@ textarea {
         margin-top: 0.5rem;
     }
     main {
-        padding: 3em 1em 3em 1em;
+        padding: 3em 5em 3em 5em;
         margin: 0;
     }
     #home .main-col-content {
@@ -399,5 +404,8 @@ textarea {
     }
     .main-menu #navbarNav ul li {
         font-size: x-small;
+    }
+    #cliffs .cliffimage {
+        max-width: 310px;
     }
 } 
